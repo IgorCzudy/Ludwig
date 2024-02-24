@@ -1,0 +1,21 @@
+input_features:
+    -
+        name: text
+        type: text
+        encoder: bert
+        preprocessing:
+            word_tokenizer: space
+
+
+output_features:
+    -
+        name: airline_sentiment
+        type: category
+
+training:
+    batch_size: 64
+    epochs: 5
+    decay: True
+    learning_rate: 0.001
+    validation_metric: accuracy
+
